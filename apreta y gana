@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Ganar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    button {
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    #mensaje {
+      display: none;
+      font-size: 48px;
+      color: #ff0000;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="mostrarMensaje()">Presiona para ganar</button>
+  <h1 id="mensaje">¡Ganaste!</h1>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+      setTimeout(function() {
+        reiniciarJuego();
+      }, 1000); // Reiniciar el juego después de 2 segundos
+    }
+
+    function reiniciarJuego() {
+      document.getElementById('mensaje').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
